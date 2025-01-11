@@ -1,11 +1,11 @@
 @echo off
-title æš´åŠ›å¡«æ»¡ç¡¬ç›˜ å»ºè®®åœ¨æ–°å»ºç£ç›˜æ¸¸ç©ï¼Œå‹¿ç”¨ä½œæ¶æ„ç”¨é€”
+title ±©Á¦ÌîÂúÓ²ÅÌ
 cls
 set file=0
 set bigger=10000000000000
 
 :disk
-SET/p Disk=è¯·è¾“å…¥ã€éœ€è¦è¢«å¡«æ»¡çš„ç£ç›˜åˆ†åŒºã€‘çš„ç›˜ç¬¦ï¼š
+SET/p Disk=ÇëÊäÈë¡¾ĞèÒª±»ÌîÂúµÄ´ÅÅÌ·ÖÇø¡¿µÄÅÌ·û£º
 echo.
 set %Disk%=%Disk:~0,1%
 IF NOT EXIST "%disk%:\" (goto disk)
@@ -14,7 +14,7 @@ attrib +s +h %disk%:\KillDisk
 
 :start
 set /a file=%file%+1
-echo æ­£åœ¨å¡«å……ç¬¬ %file% ä¸ªæ–‡ä»¶ï¼Œæ–‡ä»¶å¤§å°ï¼š%bigger% å­—èŠ‚
+echo ÕıÔÚÌî³äµÚ %file% ¸öÎÄ¼ş£¬ÎÄ¼ş´óĞ¡£º%bigger% ×Ö½Ú
 fsutil file createnew %disk%:\KillDisk\%file% %bigger%>nul
 IF NOT EXIST "%disk%:\KillDisk\%file%" (goto bigger)
 goto start
@@ -38,7 +38,7 @@ goto start
 
 :exit
 cls
-echo ç›®æ ‡ç£ç›˜å·²ç»è¢«å®Œå…¨å¡«æ»¡ï¼
-echo surpriseï¼ï¼
+echo Ä¿±ê´ÅÅÌÒÑ¾­±»ÍêÈ«ÌîÂú£¡
+echo.
 pause
 start https://github.com/MOCBear
